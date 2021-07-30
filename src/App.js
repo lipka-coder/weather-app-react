@@ -3,6 +3,7 @@ import './App.css';
 import React from "react";
 import Forecast from "./Forecast.js";
 import SearchWeather from "./SearchWeather.js";
+import Footer from "./Footer.js";
 
 export default function Weather() {
   let weatherData = {
@@ -17,6 +18,7 @@ export default function Weather() {
   }
   
   return (
+    <div>
     <div className="container">
       <div className="row">
         <div className="col-sm-6" id="weather-today">
@@ -64,7 +66,10 @@ export default function Weather() {
       </p>
 
       <Forecast />
-
+    
+      
+    </div>;
+    <Footer />
     </div>
-  );
+  );  
 }
