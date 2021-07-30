@@ -1,38 +1,141 @@
-.App {
+.container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-width: 620px;
+  border: solid thin;
+  padding: 40px 40px;
+  background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+  border-radius: 10px;
+}
+
+#icon {
+  font-size: 62px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.description {
+  text-transform: capitalize;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  font-size: 12px;
+  font-family: "Libre Baskerville", serif;
+  display: inline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul {
+  padding-left: 0rem;
 }
 
-.App-link {
-  color: #61dafb;
+#weather-today {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#weather-city {
+  text-align: center;
+  margin-top: 25px;
+  font-family: "Libre Baskerville", serif;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -20px;  
+}
+
+#celsius-link, #fahrenheit-link {
+  text-decoration: none;
+}
+
+.active {
+  color: rgb(55, 87, 102);
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: rgb(55, 87, 102);
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h5 {
+  color: rgb(55, 87, 102);
+}
+  
+form {
+  margin: 20px;
+  text-align: center;
+}
+
+button {
+  background: rgb(92, 145, 170);
+  color: rgb(46, 72, 85);
+  font-weight: 400;
+  border: solid thin;
+  border-color: rgb(79, 116, 133) 270;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 6px 12px;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  background: rgb(79, 124, 146);
+  color: rgb(102, 166, 196);
+}
+
+.weather-gods {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card {
+  background-image: radial-gradient(
+    circle 248px at center,
+    #16d9e3 0%,
+    #30c7ec 47%,
+    #46aef7 100%
+  );
+}
+
+.card-text,
+.card-text-2 {
+  color: rgb(67, 106, 124);
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+}
+
+.card-text-2 {
+  font-size: 16px;
+  margin-block-end: 0rem;
+}
+
+.card-text {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.weather-forecast-temperature-min{
+  opacity: 0.5;
+}
+
+.github {
+    text-align: center;
+    color: rgb(55, 87, 102);
+    text-decoration: none;
+}
+
+#github-link {
+  color: blueviolet;
 }
