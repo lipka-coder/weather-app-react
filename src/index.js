@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App defaultCity = "Warsaw" />
   </React.StrictMode>,
   document.getElementById('root')
 );
