@@ -3,6 +3,7 @@ import './App.css';
 import React, {useState} from "react";
 import Forecast from "./Forecast.js";
 import Footer from "./Footer.js";
+import FormattedDate from "./FormattedDate.js";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -18,8 +19,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      day: `Wednesday, 12:43`,
-      date: `Aug 3rd`,
+      day: new Date(response.data.dt*1000),
     });
 	}
     
@@ -59,9 +59,7 @@ export default function Weather(props) {
                 </span>
               </h1>
               <h5 id="day-time">
-                {weatherData.day}
-                <br />
-                {weatherData.date}
+                <FormattedDate date={weatherData.day} />
               </h5>
             </div>
           </div>
