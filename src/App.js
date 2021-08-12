@@ -14,6 +14,7 @@ export default function Weather(props) {
 		console.log(response.data);
 		setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -70,7 +71,7 @@ export default function Weather(props) {
             Weather Gods predict in the next 5 days:
           </p>
 
-        <Forecast />
+        <Forecast coordinates={weatherData.coordinates} />
     
         </div>;
         <Footer />
