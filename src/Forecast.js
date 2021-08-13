@@ -15,11 +15,17 @@ let [forecast, setForecast] = useState(null);
     return (
       <div>
         <div className="row row-cols-5">
-          <div className="card" style={{"width" : "7rem"}}>
-            <div className="card-body">
-              <WeatherForecastDay data={forecast[0]} />
-            </div>
-          </div>
+          {forecast.map(function(dailyForecast, index){
+            if (index < 5) {
+              return (
+                <div className="card" style={{"width" : "7rem"}}>
+                  <div className="card-body" key={index}>
+                    <WeatherForecastDay data={dailyForecast} />
+                  </div>
+                </div>
+              )
+            }
+          })}
         </div>
       </div>
     )
