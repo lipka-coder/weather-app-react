@@ -10,7 +10,10 @@ export default function Footer() {
           >
             Open-source code 
           </a>
-            {" "} by Kasia Podlipska 👩‍💻
+            {" "} by <a
+            href="https://www.linkedin.com/in/katarzyna-podlipska"
+            className="linkedin-link">
+              Kasia Podlipska </a>👩‍💻
         </footer>
       </div>
     );
